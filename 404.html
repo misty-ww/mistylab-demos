@@ -1,0 +1,25 @@
+<!doctype html><meta charset=utf-8><title>Page not found</title>
+<style>body{font:16px/1.6 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;
+max-width:820px;margin:48px auto;padding:0 20px;color:#101828}a{color:#0b5fff}</style>
+<script>
+var demos = ["10-en", "11-en", "12-en", "13-en", "15-en", "16-en", "17-en", "18-en", "19-en", "20-en", "21-en", "29-en", "30-en", "31-ru", "32-ru", "33-ru", "34-ru", "35-ru", "36-ru", "37-ru", "38-ru", "39-ru", "40-ru", "7-en"];
+(function () {
+  var m = location.pathname.match(/\/demos\/(\d+)-[a-z]{2}\/?$/i);
+  if (m) {
+    for (var i = 0; i < demos.length; i++) {
+      if (demos[i].indexOf(m[1] + "-") === 0) {
+        location.replace(location.pathname.replace(/\d+-[a-z]{2}\/?$/i, demos[i] + "/")
+                         + location.search + location.hash);
+        return;
+      }
+    }
+  }
+})();
+addEventListener("DOMContentLoaded", function () {
+  var cut = location.pathname.indexOf("/demos/");
+  var a = document.querySelector("a");
+  if (a && cut >= 0) a.href = location.pathname.slice(0, cut + 1);
+});
+</script>
+<h1>Page not found</h1>
+<p><a href="/">All demo pages</a></p>
