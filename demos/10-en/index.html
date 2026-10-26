@@ -17,20 +17,28 @@
  .reveal.in{opacity:1;transform:none}
  .card,.step,.tile{transition:transform .18s ease,box-shadow .18s ease}
  .card:hover,.step:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(16,24,40,.09)}
- .art{position:relative;border-radius:calc(var(--r) + 8px);overflow:hidden;min-height:330px;
-      background:linear-gradient(150deg,var(--a),var(--b));display:grid;place-items:center;
+ .art{position:relative;border-radius:calc(var(--r) + 8px);overflow:hidden;min-height:360px;
+      background:radial-gradient(135% 115% at 100% 0%,var(--b) 0%,var(--a) 68%);
+      display:grid;place-items:center;
       box-shadow:0 22px 50px rgba(16,24,40,.18)}
  .art:before{content:"";position:absolute;inset:-30% -10% auto auto;width:320px;height:320px;
       border-radius:50%;background:rgba(255,255,255,.16)}
  .art:after{content:"";position:absolute;inset:auto auto -40% -20%;width:300px;height:300px;
       border-radius:50%;background:rgba(0,0,0,.10)}
- .art svg{position:relative;width:132px;height:132px;stroke:#fff;stroke-width:1.4;fill:none;
-      stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 6px 18px rgba(0,0,0,.25))}
- .chip{position:absolute;background:rgba(255,255,255,.95);color:#0f1319;border-radius:100px;
-      padding:8px 14px;font-size:13px;font-weight:650;box-shadow:0 8px 20px rgba(16,24,40,.16)}
- .chip.one{top:22px;left:22px}
- .chip.two{bottom:26px;right:20px}
- .chip.three{bottom:74px;left:26px}
+ .phone{position:relative;width:min(100% - 52px,340px);margin:24px;background:#fff;
+      border-radius:20px;padding:13px 13px 9px;box-shadow:0 20px 44px rgba(16,24,40,.28)}
+ .ph-top{display:flex;align-items:center;gap:8px;font-size:12.5px;font-weight:650;
+      padding-bottom:9px;border-bottom:1px solid var(--line);white-space:nowrap;
+      overflow:hidden}
+ .ph-top .mark{flex:0 0 auto;width:26px;height:26px;font-size:13px;border-radius:8px}
+ .ph-top .nm{overflow:hidden;text-overflow:ellipsis}
+ .ph-on{margin-left:auto;color:#12b76a;font-weight:600;font-size:11.5px}
+ .chat{display:grid;gap:7px;padding:10px 0 4px}
+ .b{max-width:88%;padding:8px 11px;border-radius:13px;font-size:12.5px;line-height:1.35}
+ .b.in{background:#f2f4f7;border-bottom-left-radius:4px}
+ .b.out{background:var(--a);color:#fff;justify-self:end;border-bottom-right-radius:4px}
+ .artnote{font-size:11px;color:var(--mut);text-align:center;padding:6px 0 2px;
+      border-top:1px solid var(--line);margin-top:4px}
  .herogrid{display:grid;grid-template-columns:1.15fr .85fr;gap:34px;align-items:center}
  .hero.center .herogrid{grid-template-columns:1fr;max-width:720px;margin:0 auto}
  .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
@@ -157,8 +165,13 @@
       <div class="trust"><span class="pill">✓ Online booking around the clock</span><span class="pill">✓ Reply in 10 seconds</span><span class="pill">✓ Visit reminders</span></div>
     </div>
     <div class="art">
-      <svg viewBox="0 0 24 24"><path d="M4 15h16M6.5 15V9.5l2-3.5h7l2 3.5V15"/><circle cx="7.5" cy="17.5" r="1.8"/><circle cx="16.5" cy="17.5" r="1.8"/><path d="M6.5 11h11"/></svg>
-      <span class="chip one">Oil change · $55</span><span class="chip three">Diagnostics · $25</span><span class="chip two">Online booking 24/7</span>
+      <div class="phone">
+        <div class="ph-top"><span class="mark sharp">D</span>
+          <span class="nm">DSA Auto Body</span>
+          <span class="ph-on">● online</span></div>
+        <div class="chat"><div class="b in">Hi! How much is oil change? Any slots tomorrow?</div><div class="b out">Oil change - $55. Tomorrow is free at 09:00 and 10:00. Shall I book you in?</div><div class="b in">Yes, 09:00. Ivan</div><div class="b out">Booked, Ivan - tomorrow at 09:00. I will remind you a day before.</div></div>
+        <div class="artnote">how the admin bot answers: 10 seconds, around the clock</div>
+      </div>
     </div>
   </div>
   <div class="facts">
