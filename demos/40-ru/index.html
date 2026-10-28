@@ -64,7 +64,7 @@
  .tg-cta-in p{font-size:15px;opacity:.92;max-width:24em}
  .btn.light{background:#fff;color:var(--ink);box-shadow:0 6px 18px rgba(15,23,42,.18)}
  .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:var(--s4)}
- .tile{position:relative;height:192px;border-radius:var(--r);overflow:hidden;
+ .tile{position:relative;height:240px;border-radius:var(--r);overflow:hidden;
       background:linear-gradient(140deg,var(--soft),#fff);border:1px solid var(--line);
       display:grid;place-items:center}
  .tile svg{width:54px;height:54px;stroke:var(--a);opacity:.5;stroke-width:1.5;fill:none;
@@ -98,7 +98,7 @@
  .pill{display:inline-flex;align-items:center;gap:var(--s2);background:var(--soft);color:var(--a);
        padding:var(--s2) var(--s3);border-radius:var(--r-pill);font-size:13px;font-weight:600}
  .dot{width:7px;height:7px;border-radius:50%;background:#12b76a}
- .hero{position:relative;overflow:hidden;padding:var(--s8) 0 var(--s7);background:
+ .hero{position:relative;overflow:hidden;padding:var(--s7) 0 var(--s6);background:
        radial-gradient(900px 420px at 12% -10%,var(--soft),transparent 65%),#fff}
  .hero.center{text-align:center}
  .hero.center p.sub{margin-left:auto;margin-right:auto}
@@ -117,6 +117,7 @@
  .card h3{margin-bottom:var(--s2)}
  .price{font-size:22px;font-weight:700;letter-spacing:-.02em;color:var(--a)}
  .card .mut{font-size:13px}
+ .booksec{background:var(--soft)}
  .book{display:grid;grid-template-columns:1.05fr .95fr;gap:var(--s6);align-items:start}
  form{background:var(--soft);border:1px solid var(--line);border-radius:var(--r);padding:var(--s5)}
  label{display:block;font-size:13px;color:var(--mut);margin:var(--s3) 0 var(--s1)}
@@ -160,9 +161,13 @@
  .deco-warm .hero{background:linear-gradient(180deg,var(--soft),#fff)}
  .deco-plain .card{border:1px solid var(--line);box-shadow:none}
  .deco-plain .btn{box-shadow:none}
+ .deco-shop .pricesec{background:var(--soft)}
+ .deco-shop .booksec{background:#fff}
+ .deco-shop form{background:var(--soft)}
  @media(min-width:860px){.sticky{display:none}body{padding-bottom:0}}
  @media(max-width:860px){
-   .book,.two,.botgrid,.herocol{grid-template-columns:1fr}.hero{padding:var(--s7) 0 var(--s6)}
+   .book,.two,.botgrid,.herocol{grid-template-columns:1fr}.hero{padding:var(--s6) 0 var(--s5)}
+   section{padding:var(--s6) 0}.tile{height:180px}
    .tgart{padding:var(--s5)}
    body{font-size:16px}h1{font-size:32px}h2{font-size:22px}h3{font-size:16px}
    .lead,.hero p.sub{font-size:16px}.step p,.facts{font-size:14px}footer{font-size:12px}}
@@ -207,13 +212,13 @@
   </div>
 </div></div>
 
-<section class="reveal"><div class="wrap">
+<section class="reveal pricesec"><div class="wrap">
   <h2>Цены</h2>
   <p class="lead">Стартовые цены — ниже средней по городу.</p>
   <div class="grid"><div class="card"><h3>Консультация</h3><div class="price">2 000 ₽</div></div><div class="card"><h3>Договор</h3><div class="price">5 000 ₽</div></div><div class="card"><h3>Ведение дела в суде</h3><div class="price">30 000 ₽</div></div></div>
 </div></section>
 
-<section class="reveal" id="booking" style="background:var(--soft)"><div class="wrap book">
+<section class="reveal booksec" id="booking"><div class="wrap book">
   <div>
     <h2>Онлайн-запись</h2>
     <p class="lead">Выберите день и оставьте номер — перезвоним в течение 10 минут.</p>
