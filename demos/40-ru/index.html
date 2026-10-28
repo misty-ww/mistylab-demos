@@ -21,8 +21,12 @@
  .reveal.in{opacity:1;transform:none}
  .card,.step,.tile{transition:transform .18s ease,box-shadow .18s ease}
  .card:hover,.step:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(16,24,40,.09)}
- .herocol{display:grid;gap:var(--s5)}
- .hero.center .herocol{justify-items:center;text-align:center;max-width:720px;margin:0 auto}
+ .herocol{display:grid;gap:var(--s6);align-items:center;grid-template-columns:1.15fr .85fr}
+ .herocopy{display:grid;gap:var(--s5)}
+ .heromedia{display:grid;place-items:center}
+ .hero.center .herocol{grid-template-columns:1fr;justify-items:center;text-align:center;
+      max-width:720px;margin:0 auto}
+ .hero.center .herocopy{justify-items:center}
  .eyebrow{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.08em;
       text-transform:uppercase;color:var(--mut)}
  .chat{display:grid;gap:var(--s2);padding:var(--s3) 0 var(--s1)}
@@ -54,6 +58,11 @@
  .tg .kbd{justify-self:start;background:#2b5278;color:#fff;border-radius:10px;
       padding:var(--s2) var(--s4);font-size:13px;font-weight:600}
  .tg .artnote{border-top-color:rgba(255,255,255,.10);color:#7d8f9f}
+ .tg-cta-in{position:relative;display:grid;gap:var(--s4);justify-items:center;text-align:center;
+      color:#fff}
+ .tg-cta-in b{font-size:20px;font-weight:700}
+ .tg-cta-in p{font-size:15px;opacity:.92;max-width:24em}
+ .btn.light{background:#fff;color:var(--ink);box-shadow:0 6px 18px rgba(15,23,42,.18)}
  .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:var(--s4)}
  .tile{position:relative;height:192px;border-radius:var(--r);overflow:hidden;
       background:linear-gradient(140deg,var(--soft),#fff);border:1px solid var(--line);
@@ -153,7 +162,7 @@
  .deco-plain .btn{box-shadow:none}
  @media(min-width:860px){.sticky{display:none}body{padding-bottom:0}}
  @media(max-width:860px){
-   .book,.two,.botgrid{grid-template-columns:1fr}.hero{padding:var(--s7) 0 var(--s6)}
+   .book,.two,.botgrid,.herocol{grid-template-columns:1fr}.hero{padding:var(--s7) 0 var(--s6)}
    .tgart{padding:var(--s5)}
    body{font-size:16px}h1{font-size:32px}h2{font-size:22px}h3{font-size:16px}
    .lead,.hero p.sub{font-size:16px}.step p,.facts{font-size:14px}footer{font-size:12px}}
@@ -173,17 +182,27 @@
 
 <div class="hero center"><div class="blob"></div><div class="wrap">
   <div class="herocol">
-    <span class="pill"><span class="dot"></span><span id="state">Сейчас открыто</span></span>
-    <h1>Первый юридический центр Казани — юристы Казань</h1>
-    <p class="sub">Консультации, договоры и суды — начнём с бесплатного разбора.</p>
-    <div class="cta">
-      <a class="btn" href="#booking">Записаться онлайн</a>
-      <a class="btn ghost" href="tel:+7 843 2042886">Позвонить +7 843 2042886</a>
+    <div class="herocopy">
+      <span class="pill"><span class="dot"></span><span id="state">Сейчас открыто</span></span>
+      <h1>Первый юридический центр Казани — юристы Казань</h1>
+      <p class="sub">Консультации, договоры и суды — начнём с бесплатного разбора.</p>
+      <div class="cta">
+        <a class="btn" href="#booking">Записаться онлайн</a>
+        <a class="btn ghost" href="tel:+7 843 2042886">Позвонить +7 843 2042886</a>
+      </div>
+      <div class="trust"><span class="pill">✓ Онлайн-запись круглосуточно</span><span class="pill">✓ Ответ клиенту за 10 секунд</span><span class="pill">✓ Напоминание о визите</span></div>
+      <div class="facts">
+        <div><b>Часы работы</b>Пн-Пт 9:00-19:00; Сб 10:00-15:00</div>
+        <div><b>Адрес</b>Казань</div>
+      </div>
     </div>
-    <div class="trust"><span class="pill">✓ Онлайн-запись круглосуточно</span><span class="pill">✓ Ответ клиенту за 10 секунд</span><span class="pill">✓ Напоминание о визите</span></div>
-    <div class="facts">
-      <div><b>Часы работы</b>Пн-Пт 9:00-19:00; Сб 10:00-15:00</div>
-      <div><b>Адрес</b>Казань</div>
+    <div class="heromedia">
+      <div class="tg">
+        <div class="tg-top"><span class="mark sharp">П</span>
+          <span class="tg-who"><b>Первый юридический центр Казани</b><span>бот · онлайн</span></span></div>
+        <div class="chat"><div class="b in">Здравствуйте! Сколько стоит консультация? Есть время завтра?</div><div class="b out">Консультация — 2 000 ₽. Завтра свободно 09:00 и 10:00. Записать вас?</div><div class="kbd">Записаться на 09:00</div><div class="b in">Да, на 09:00. Иван</div><div class="b out">Записали, Иван: завтра в 09:00. Напомню за сутки.</div></div>
+        <div class="artnote">так отвечает бот-администратор: 10 секунд, круглосуточно</div>
+      </div>
     </div>
   </div>
 </div></div>
@@ -224,11 +243,11 @@
     <div class="perks"><div class="perk"><i>✓</i><span>Ответ за 10 секунд, круглосуточно</span></div><div class="perk"><i>✓</i><span>Сам предлагает свободные слоты и записывает</span></div><div class="perk"><i>✓</i><span>Напоминает клиенту за сутки до визита</span></div></div>
   </div>
   <div class="tgart">
-    <div class="tg">
-      <div class="tg-top"><span class="mark sharp">П</span>
-        <span class="tg-who"><b>Первый юридический центр Казани</b><span>бот · онлайн</span></span></div>
-      <div class="chat"><div class="b in">Здравствуйте! Сколько стоит консультация? Есть время завтра?</div><div class="b out">Консультация — 2 000 ₽. Завтра свободно 09:00 и 10:00. Записать вас?</div><div class="kbd">Записаться на 09:00</div><div class="b in">Да, на 09:00. Иван</div><div class="b out">Записали, Иван: завтра в 09:00. Напомню за сутки.</div></div>
-      <div class="artnote">так отвечает бот-администратор: 10 секунд, круглосуточно</div>
+    <div class="tg-cta-in">
+      <b>Так же бот ответит вашим клиентам</b>
+      <p>Ответ за 10 секунд, свободные слоты и напоминание за сутки — без звонков и ручных
+        переписок.</p>
+      <a class="btn light" href="#booking">Записаться онлайн</a>
     </div>
   </div>
 </div></section>
