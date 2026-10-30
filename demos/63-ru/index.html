@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Современная стоматология — стоматология Санкт-Петербург</title>
+<meta name="description" content="Современная стоматология, стоматология in Санкт-Петербург. Prices, online booking, phone.">
+<style>
+ :root{--a:#0b5fff;--b:#22b8cf;--soft:#eff5ff;--r:16px;--ink:#0f1319;--mut:#667085;--line:#e6e9ee;
+       --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--s8:64px;--s9:96px;
+       --r-card:16px;--r-btn:12px;--r-input:12px;--r-pill:999px;
+       --sh-card:0 8px 24px rgba(15,23,42,.08);--sh-btn:0 6px 18px rgba(15,23,42,.18)}
+ *{box-sizing:border-box;margin:0;padding:0}
+ html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+ body{font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      color:var(--ink);background:#fff;padding-bottom:var(--s9)}
+ .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+ h1,h2{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+ h1{font-size:44px;line-height:1.1;letter-spacing:-.025em;font-weight:700}
+ h2{font-size:28px;line-height:1.2;letter-spacing:-.015em;margin-bottom:var(--s4)}
+ h3{font-size:17px;line-height:1.45;font-weight:600}
+ .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+ .reveal.in{opacity:1;transform:none}
+ .card,.tile{transition:transform .18s ease,box-shadow .18s ease}
+ .card:hover,.tile:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(16,24,40,.09)}
+ .herocol{display:grid;gap:var(--s7);align-items:center;grid-template-columns:1fr auto}
+ .herocopy{display:grid;gap:var(--s4)}
+ .heromedia{display:grid;justify-items:end;align-items:center}
+ .hero.center .heromedia{justify-items:center}
+ .art{background:var(--soft);border:1px solid var(--line);border-radius:calc(var(--r) + 8px);
+      padding:var(--s6);display:grid;place-items:center}
+ .art .tg{width:min(100%,320px)}
+ .hero.center .herocol{grid-template-columns:1fr;justify-items:center;text-align:center;
+      gap:var(--s5)}
+ .hero.center .herocopy{justify-items:center}
+ .eyebrow{display:inline-block;margin-bottom:var(--s4);font-size:13px;font-weight:600;letter-spacing:.08em;
+      text-transform:uppercase;color:var(--mut)}
+ .chat{display:grid;gap:var(--s2);padding:var(--s3) 0 var(--s1);justify-items:start}
+ .b{max-width:88%;padding:var(--s2) var(--s3);border-radius:15px;font-size:13px;line-height:1.35;
+      text-align:left;overflow-wrap:break-word}
+ .b.in{background:#f2f4f7;border-bottom-left-radius:4px}
+ .b.out{background:var(--a);color:#fff;justify-self:end;border-bottom-right-radius:4px}
+ .artnote{font-size:12px;color:var(--mut);text-align:center;padding:var(--s1) 0;
+      border-top:1px solid var(--line);margin-top:var(--s1)}
+ .botgrid{display:grid;grid-template-columns:1fr 1fr;gap:var(--s6);align-items:center}
+ .botgrid>div:first-child{display:grid;gap:var(--s3);align-content:start}
+ .botgrid>div:first-child>*{margin:0}
+ .botstack{text-align:center}
+ .botstack .botgrid{grid-template-columns:1fr;gap:var(--s4)}
+ .botstack .botgrid>div:first-child{gap:var(--s7)}
+ .botstack .lead{max-width:34em;margin:0 auto}
+ .botstack .perks{max-width:36em;margin:0 auto;text-align:left}
+ .botstack .tgart{width:100%}
+ .perks{display:grid;gap:var(--s3);margin-top:var(--s5)}
+ .perk{display:flex;gap:var(--s3);align-items:center;font-size:15px}
+ .perk i{flex:0 0 22px;height:22px;border-radius:50%;background:var(--a);color:#fff;display:grid;
+      place-items:center;font-size:12px;font-style:normal;font-weight:700}
+ .tgart{position:relative;background:linear-gradient(135deg,var(--a),var(--b));
+      border-radius:calc(var(--r) + 8px);padding:var(--s7);display:grid;place-items:center;
+      overflow:hidden;box-shadow:0 22px 50px rgba(16,24,40,.18)}
+ .tgart:before{content:"";position:absolute;inset:-30% -10% auto auto;width:320px;height:320px;
+      border-radius:50%;background:rgba(255,255,255,.16)}
+ .tg{position:relative;width:min(100%,320px);background:#17212b;border-radius:24px;
+      padding:var(--s4) var(--s3);box-shadow:0 24px 50px rgba(15,23,42,.35);
+      text-align:left}
+ .tg-top{display:flex;align-items:center;gap:var(--s2);padding-bottom:var(--s2);
+      border-bottom:1px solid rgba(255,255,255,.10)}
+ .tg-top .mark{flex:0 0 auto;width:30px;height:30px;font-size:14px}
+ .tg-who{flex:1 1 auto;min-width:0;display:grid;line-height:1.25}
+ .tg-who b{color:#fff;font-size:13px;font-weight:600;text-align:left;
+      overflow-wrap:break-word;hyphens:auto}
+ .tg-who span{font-size:11px;color:#7d8f9f;text-align:left}
+ .tg .artnote{text-align:center}
+ .tg .b.in{background:#212d3b;color:#fff}
+ .tg .b.out{background:#2b5278;color:#fff}
+ .tg .artnote{border-top-color:rgba(255,255,255,.10);color:#7d8f9f}
+ .tg-cta-in{position:relative;display:grid;gap:var(--s4);justify-items:center;text-align:center;
+      color:#fff}
+ .tg-cta-in b{font-size:20px;font-weight:700}
+ .tg-cta-in p{font-size:15px;opacity:.92;max-width:24em}
+ .btn.light{background:#fff;color:var(--ink);box-shadow:0 6px 18px rgba(15,23,42,.18)}
+ .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:var(--s4)}
+ .tile{position:relative;height:240px;border-radius:var(--r);overflow:hidden;
+      background:linear-gradient(140deg,var(--soft),#fff);border:1px solid var(--line);
+      display:grid;place-items:center}
+ .tile svg{width:54px;height:54px;stroke:var(--a);opacity:.5;stroke-width:1.5;fill:none;
+      stroke-linecap:round;stroke-linejoin:round}
+ .tile span{position:absolute;bottom:var(--s3);left:0;right:0;text-align:center;font-size:13px;
+      color:var(--mut)}
+ .slots{display:flex;gap:var(--s2);flex-wrap:wrap;margin-top:var(--s2)}
+ .slot{border:1px solid var(--line);background:#fff;border-radius:var(--r-input);padding:var(--s2) var(--s4);
+      font-size:15px;cursor:pointer;font-weight:600;color:var(--ink)}
+ .slot.on{background:var(--a);border-color:var(--a);color:#fff}
+ .next{display:flex;align-items:center;gap:var(--s2);margin-top:var(--s3);font-size:15px;color:var(--mut)}
+ .next b{color:var(--ink)}
+ .mark svg{width:19px;height:19px;stroke:#fff;stroke-width:1.9;fill:none;stroke-linecap:round;
+      stroke-linejoin:round}
+ .mut{color:var(--mut)}
+ .full{display:inline}.short{display:none}
+ header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);
+        border-bottom:1px solid var(--line)}
+ .bar{display:flex;align-items:center;gap:var(--s3);height:auto;padding:var(--s4) 0}
+ .logo{display:flex;align-items:center;gap:var(--s3);font-weight:700}
+ .mark{width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,var(--a),var(--b));
+       color:#fff;display:grid;place-items:center;font-size:17px;font-weight:700}
+ .mark.circle{border-radius:50%}
+ .mark.sharp{border-radius:5px}
+ .bar .sp{flex:1}
+ .btn{display:inline-block;background:var(--a);color:#fff;text-decoration:none;
+      padding:var(--s3) var(--s5);border-radius:var(--r-btn);font-weight:600;border:0;cursor:pointer;
+      font-size:16px;box-shadow:var(--sh-btn);transition:.15s}
+ .btn:hover{filter:brightness(1.08)}
+ .btn.ghost{background:#fff;color:var(--ink);border:1px solid var(--line);box-shadow:none}
+ .btn.wide{width:100%;text-align:center}
+ .pill{display:inline-flex;align-items:center;gap:var(--s2);background:var(--soft);color:var(--a);
+       padding:var(--s2) var(--s3);border-radius:var(--r-pill);font-size:13px;font-weight:600}
+ .dot{width:7px;height:7px;border-radius:50%;background:#12b76a}
+ .hero{position:relative;overflow:hidden;padding:var(--s7) 0 var(--s6);background:#fff}
+ .hero.center{text-align:center}
+ .hero.center p.sub{margin-left:auto;margin-right:auto}
+ .hero.center .cta,.hero.center .trust,.hero.center .facts{justify-content:center}
+ .herocopy .pill{justify-self:center}
+ .hero p.sub{color:var(--mut);margin-top:0;font-size:17px;max-width:36em}
+ .cta{display:flex;gap:var(--s3);flex-wrap:wrap}
+ .facts{display:flex;gap:var(--s7);flex-wrap:wrap;font-size:15px;color:var(--mut)}
+ .facts b{display:block;color:var(--ink);font-weight:600}
+ .trust{display:flex;gap:var(--s3);flex-wrap:wrap}
+ section{padding:var(--s7) 0}
+ .lead{color:var(--mut);margin-bottom:var(--s4);font-size:17px}
+ .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:var(--s4)}
+ .card{border:1px solid var(--line);border-radius:var(--r);padding:var(--s5);background:#fff}
+ .card h3{margin-bottom:var(--s2)}
+ .price{font-size:22px;font-weight:700;letter-spacing:-.02em;color:var(--a)}
+ .card .mut{font-size:13px}
+ .booksec{background:var(--soft)}
+ .book{display:grid;grid-template-columns:1.05fr .95fr;gap:var(--s6);align-items:start}
+ .autocol{display:grid;gap:var(--s2);align-content:start}
+ .autocol>*{margin:0}
+ form{background:var(--soft);border:1px solid var(--line);border-radius:var(--r);padding:var(--s5)}
+ label{display:block;font-size:13px;color:var(--mut);margin:var(--s3) 0 var(--s1)}
+ input,select{width:100%;padding:var(--s3);border:1px solid var(--line);border-radius:var(--r-input);
+       font-size:16px;background:#fff;color:var(--ink)}
+ .row{display:grid;grid-template-columns:1fr 1fr;gap:var(--s3)}
+ form .btn{margin-top:var(--s5)}
+ .ok{display:none;background:#ecfdf3;border:1px solid #abefc6;color:#087443;padding:var(--s4);
+     border-radius:var(--r-input);margin-top:var(--s4);font-size:15px}
+ .ok.on{display:block}
+ .err{display:none;background:#fef3f2;border:1px solid #fecdca;color:#b42318;padding:var(--s4);
+     border-radius:var(--r-input);margin-top:var(--s4);font-size:15px}
+ .err.on{display:block}
+ .steps{display:grid;gap:var(--s2)}
+ .step{display:flex;gap:var(--s3);align-items:flex-start}
+ .num{flex:0 0 30px;height:30px;border-radius:var(--r-input);background:var(--a);color:#fff;display:grid;
+      place-items:center;font-weight:700;font-size:14px}
+ .step h3{font-size:17px}
+ .step p{color:var(--mut);font-size:15px}
+ .wheregrid{display:grid;grid-template-columns:1fr 1.25fr;gap:var(--s6);align-items:start}
+ .wheregrid .card p{margin-bottom:var(--s2)}
+ .wheregrid .card .btn{margin-top:var(--s2)}
+ .mapwrap{position:relative;height:310px;border:1px solid var(--line);border-radius:var(--r);
+          overflow:hidden;background:var(--soft)}
+ .mapwrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+ .mapfallback{position:absolute;inset:0;display:grid;place-items:center;text-align:center;
+              color:var(--mut);font-size:14px;padding:20px}
+ .mapwrap.loaded .mapfallback{display:none}
+ .mapcard{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:var(--s5)}
+ footer{border-top:1px solid var(--line);padding:var(--s6) 0;color:var(--mut);font-size:13px}
+ footer .note{margin-top:var(--s2);max-width:62em}
+ .sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;background:#0f1319;
+     padding:var(--s3) var(--s4);display:flex;gap:var(--s3);align-items:center}
+ .sticky .btn{flex:1;text-align:center}
+ /* deco sets — one per niche family, mirrors the Figma mock-ups */
+ .deco-soft .card{box-shadow:var(--sh-card)}
+ .deco-soft .hero,.deco-warm .hero{background:var(--soft)}
+ .deco-crisp .card{box-shadow:var(--sh-card);border:1px solid var(--line)}
+ .deco-industrial .card{border:1px solid var(--line);border-radius:4px;box-shadow:none}
+ .deco-industrial h2:not(.bhead),.deco-industrial .step h3{text-transform:uppercase;letter-spacing:.04em}
+ .deco-warm .card{box-shadow:var(--sh-card);background:#fffdf9}
+ .deco-plain .card{border:1px solid var(--line);box-shadow:none}
+ .deco-plain .btn{box-shadow:none}
+ .deco-shop .pricesec{background:var(--soft)}
+ .deco-shop .booksec{background:#fff}
+ .deco-shop form{background:var(--soft)}
+ @media(min-width:860px){.sticky{display:none}body{padding-bottom:0}}
+ @media(max-width:860px){
+   .book,.botgrid,.herocol,.wheregrid{grid-template-columns:1fr}.heromedia{justify-items:start}.hero{padding:var(--s6) 0 var(--s5)}
+   section{padding:var(--s6) 0}.tile{height:180px}
+   .tgart{padding:var(--s5)}
+   body{font-size:16px}h1{font-size:32px}h2{font-size:22px}h3{font-size:16px}
+   .lead,.hero p.sub{font-size:16px}.step p,.facts{font-size:14px}footer{font-size:12px}}
+ @media(max-width:560px){.bar .tel{display:none}.bar{height:auto;padding:var(--s3) 0}.logo{font-size:14px;
+     line-height:1.15}
+   .full{display:none}.short{display:inline}
+   .art{padding:var(--s4)}
+   .mark{width:30px;height:30px;font-size:15px}.row{grid-template-columns:1fr}
+   .bar .btn{padding:var(--s2) var(--s4);font-size:15px;white-space:nowrap}
+   .facts{gap:var(--s4)}}
+ /* Screenshot mode (?static&shot=hero|chat|prices|booking): one block of the page on a
+    clean canvas, so the manager can send a sharp picture instead of a link. Only the
+    query parameter turns it on; the published page is untouched. */
+ html.omp-shot-hero body > *:not(.hero):not(header),
+ html.omp-shot-chat body > *:not(.hero):not(header){display:none!important}
+ html.omp-shot-prices body > *:not(.pricesec){display:none!important}
+ html.omp-shot-booking body > *:not(#booking){display:none!important}
+ html.omp-shot-chat header,html.omp-shot-prices header,html.omp-shot-booking header{display:none!important}
+ html.omp-shot footer,html.omp-shot .sticky{display:none!important}
+ html.omp-shot-chat .hero .herocopy,html.omp-shot-chat .hero .facts{display:none!important}
+ html.omp-shot-chat .herocol{grid-template-columns:1fr!important;justify-items:center}
+ html.omp-shot-chat .hero{padding:16px 0}
+ html.omp-shot-prices body > *:not(.pricesec){display:none!important}
+ html.omp-shot-prices .pricesec{padding:28px 0}
+ html.omp-shot-booking body > *:not(#booking){display:none!important}
+ html.omp-shot-booking #booking{padding:28px 0}
+</style></head>
+<body class="deco-crisp" data-open="" data-lead="http://127.0.0.1:8777/lead" data-biz="63" data-bizname="Современная стоматология">
+<header><div class="wrap bar">
+  <div class="logo"><span class="mark "><svg viewBox="0 0 24 24"><path d="M12 3.5c3 0 5.5 1.8 5.5 4.6 0 2.3-.8 3.4-1.3 5.4-.4 1.7-.5 7-2.2 7-1.3 0-1.4-4.2-2-4.2s-.7 4.2-2 4.2c-1.7 0-1.8-5.3-2.2-7-.5-2-1.3-3.1-1.3-5.4C6.5 5.3 9 3.5 12 3.5z"/></svg></span><span>Современная стоматология</span></div>
+  <div class="sp"></div>
+  <a class="tel mut" href="tel:+7 812 2307068" style="text-decoration:none;font-weight:600">+7 812 2307068</a>
+  <a class="btn" href="#booking"><span class="full">Записаться онлайн</span><span class="short">Записаться</span></a>
+</div></header>
+
+<div class="hero "><div class="wrap">
+  <div class="herocol">
+    <div class="herocopy">
+      <span class="pill"><span class="dot"></span><span id="state">Сейчас открыто</span></span>
+      <h1>Современная стоматология — стоматология Санкт-Петербург</h1>
+      <p class="sub">Чистка, лечение и имплантация — с записью онлайн и напоминанием о визите.</p>
+      <div class="cta">
+        <a class="btn" href="#booking">Записаться онлайн</a>
+        <a class="btn ghost" href="tel:+7 812 2307068">Позвонить</a>
+      </div>
+      <div class="trust"><span class="pill">✓ Онлайн-запись круглосуточно</span><span class="pill">✓ Ответ клиенту за 10 секунд</span><span class="pill">✓ Напоминание о визите</span></div>
+      <div class="facts">
+        <div><b>Часы работы</b>Часы работы впишем ваши</div>
+        <div><b>Адрес</b>Санкт-Петербург</div>
+      </div>
+    </div>
+    <div class="heromedia">
+      <div class="art">
+      <div class="tg">
+        <div class="tg-top"><span class="mark ">С</span>
+          <span class="tg-who"><b>Современная стоматология</b><span>бот · онлайн</span></span></div>
+        <div class="chat"><div class="b in">Здравствуйте! Сколько стоит консультация? Есть время завтра?</div><div class="b out">Консультация — бесплатно. Завтра свободно 09:00 и 10:00. Записать вас?</div><div class="b in">Да, на 09:00. Иван</div><div class="b out">Записали, Иван: завтра в 09:00. Напомню за сутки.</div></div>
+        <div class="artnote">так отвечает бот-администратор: 10 секунд, круглосуточно</div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div></div>
+
+<section class="reveal pricesec"><div class="wrap">
+  <span class="eyebrow">Прайс</span>
+  <h2>Цены</h2>
+  <p class="lead">Стартовые цены — ниже средней по городу.</p>
+  <div class="grid"><div class="card"><h3>Консультация</h3><div class="price">бесплатно</div></div><div class="card"><h3>Чистка зубов</h3><div class="price">3 000 ₽</div></div><div class="card"><h3>Лечение кариеса</h3><div class="price">4 500 ₽</div></div><div class="card"><h3>Имплантация</h3><div class="price">30 000 ₽</div></div></div>
+</div></section>
+
+<section class="reveal booksec" id="booking"><div class="wrap book">
+  <div class="autocol">
+    <h2>Онлайн-запись</h2>
+    <p class="lead">Выберите день и оставьте номер — перезвоним в течение 10 минут.</p>
+    <h3>Что происходит после заявки</h3>
+    <div class="steps"><div class="step"><div class="num">1</div><div><h3>Ответ за 10 секунд</h3><p>Клиент получает подтверждение сразу, а не «мы вам перезвоним».</p></div></div><div class="step"><div class="num">2</div><div><h3>Напоминание за сутки</h3><p>За день до визита приходит напоминание — неявок меньше.</p></div></div><div class="step"><div class="num">3</div><div><h3>Сбор отзывов</h3><p>После визита клиенту приходит просьба оставить отзыв на карте.</p></div></div><div class="step"><div class="num">4</div><div><h3>Ночные заявки</h3><p>Заявка в 23:40 не теряется: клиент получает ответ, вы видите её утром.</p></div></div></div>
+  </div>
+  <form onsubmit="return ompBook(event)">
+    <label>День</label><input type="date" id="bkdate" required>
+    <label>Время</label>
+    <div class="slots" id="slots"><button type="button" class="slot" data-m="540">09:00</button><button type="button" class="slot" data-m="600">10:00</button><button type="button" class="slot" data-m="660">11:00</button><button type="button" class="slot" data-m="720">12:00</button><button type="button" class="slot" data-m="780">13:00</button><button type="button" class="slot" data-m="840">14:00</button><button type="button" class="slot" data-m="900">15:00</button><button type="button" class="slot" data-m="960">16:00</button></div>
+    <div class="next">🕒 Ближайшее свободное время: <b id="nextslot">…</b></div>
+    <input type="hidden" id="bktime" value="">
+    <label>Как вас зовут</label><input id="bkname" required placeholder="Иван">
+    <label>Телефон</label><input id="bkphone" required type="tel" placeholder="+7 900 000-00-00">
+    <button class="btn wide" type="submit">Записаться</button>
+    <div class="ok" id="ok">Готово! Заявка ушла администратору, он перезвонит.</div>
+    <div class="err" id="err">Не удалось отправить. Позвоните нам — номер в шапке.</div>
+  </form>
+</div></section>
+
+<section class="reveal "><div class="wrap botgrid">
+  <div>
+    <span class="eyebrow">Бот в Telegram</span>
+    <h2 class="bhead">Отвечает и записывает сам</h2>
+    <p class="lead">Клиент пишет в Telegram — бот отвечает за 10 секунд, называет цену,
+      показывает свободное время и записывает. Круглосуточно, без администратора.</p>
+    <div class="perks"><div class="perk"><i>✓</i><span>Ответ за 10 секунд, круглосуточно</span></div><div class="perk"><i>✓</i><span>Сам предлагает свободные слоты и записывает</span></div><div class="perk"><i>✓</i><span>Напоминает клиенту за сутки до визита</span></div></div>
+  </div>
+  <div class="tgart">
+    <div class="tg-cta-in">
+      <b>Так же бот ответит вашим клиентам</b>
+      <p>Ответ за 10 секунд, свободные слоты и напоминание за сутки — без звонков и ручных
+        переписок.</p>
+      <a class="btn light" href="#booking">Записаться онлайн</a>
+    </div>
+  </div>
+</div></section>
+
+<section class="reveal"><div class="wrap">
+  <span class="eyebrow">Галерея</span>
+  <h2>Как это выглядит</h2>
+  <p class="lead">Здесь будут ваши фото — пришлите, поставим.</p>
+  <div class="tiles"><div class="tile"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10.5" r="1.8"/><path d="M4 17.5l5-4 3.5 2.6L16 12l4 4"/></svg><span>Фото работ</span></div><div class="tile"><svg viewBox="0 0 24 24"><path d="M4 20V9.5L12 4l8 5.5V20"/><path d="M9.5 20v-6h5v6"/></svg><span>Как у нас внутри</span></div><div class="tile"><svg viewBox="0 0 24 24"><circle cx="9" cy="9" r="3"/><circle cx="17" cy="10" r="2.4"/><path d="M3 20c0-3 2.6-5 6-5s6 2 6 5"/><path d="M15.5 20c0-2 1.6-3.6 3.5-3.6"/></svg><span>Наша команда</span></div></div>
+</div></section>
+
+<section class="reveal"><div class="wrap">
+  <span class="eyebrow">Где мы</span>
+  <h2 class="whead">Как нас найти</h2>
+  <p class="lead">Приезжайте — подскажем, где припарковаться.</p>
+  <div class="wheregrid">
+    <div class="card">
+      <h3>Современная стоматология</h3>
+      <p class="mut">Санкт-Петербург</p>
+      <p class="mut">Часы работы впишем ваши</p>
+      <a class="btn ghost" href="https://yandex.ru/maps/?text=%D0%A1%D0%BE%D0%B2%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F+%D1%81%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F" target="_blank" rel="noopener">Открыть в картах</a>
+    </div>
+    <div class="mapcol"><p class="lead">Санкт-Петербург</p></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div><b>Современная стоматология</b> · Санкт-Петербург · <a href="tel:+7 812 2307068">+7 812 2307068</a></div>
+  <div class="note">Демонстрационная страница, сделанная для Современная стоматология. Услуги, цены, фото и тексты подставим ваши. Цены в примере — стартовые, ниже средней по городу.</div>
+</div></footer>
+
+<div class="sticky">
+  <a class="btn ghost" href="tel:+7 812 2307068">Позвонить</a>
+  <a class="btn" href="#booking"><span class="full">Записаться онлайн</span><span class="short">Записаться</span></a>
+</div>
+
+<script>
+function ompBook(e){
+  e.preventDefault();
+  var t=document.getElementById('bktime');
+  if(t&&!t.value){document.getElementById('nextslot').textContent='сначала выберите время';return false;}
+  var ok=document.getElementById('ok'), err=document.getElementById('err');
+  var ep=document.body.getAttribute('data-lead');
+  if(!ep){ok.className='ok on';return false;}
+  var payload={
+    biz:document.body.getAttribute('data-biz'),
+    biz_name:document.body.getAttribute('data-bizname'),
+    name:(document.getElementById('bkname')||{}).value||'',
+    phone:(document.getElementById('bkphone')||{}).value||'',
+    date:(document.getElementById('bkdate')||{}).value||'',
+    time:t?t.value:''
+  };
+  fetch(ep,{method:'POST',headers:{'Content-Type':'application/json'},
+            body:JSON.stringify(payload)})
+    .then(function(r){ if(!r.ok){throw new Error('bad');} ok.className='ok on'; })
+    .catch(function(){ if(err){err.className='err on';} });
+  return false;
+}
+(function(){
+  var raw=document.body.getAttribute('data-open');
+  var week=null;
+  try{week=JSON.parse(raw||'null');}catch(err){week=null;}
+  function pad(n){return (n<10?'0':'')+n;}
+  function label(m){return pad(Math.floor(m/60))+':'+pad(m%60);}
+
+  var state=document.getElementById('state');
+  if(state&&week){
+    var now=new Date(), d=(now.getDay()+6)%7, mins=now.getHours()*60+now.getMinutes();
+    var spans=week[String(d)]||[];
+    var isOpen=spans.some(function(s){return mins>=s[0]&&mins<s[1];});
+    state.textContent=isOpen?"Сейчас открыто":"Сейчас закрыто";
+  }
+
+  var dateEl=document.getElementById('bkdate');
+  var slotsEl=document.getElementById('slots');
+  var timeEl=document.getElementById('bktime');
+  var nextEl=document.getElementById('nextslot');
+  if(!slotsEl||!dateEl){return;}
+
+  function spansFor(date){
+    if(!week){return [[540,1140]];}
+    return week[String((date.getDay()+6)%7)]||[];
+  }
+  function slotsFor(date){
+    var spans=spansFor(date), out=[];
+    for(var i=0;i<spans.length;i++){
+      var from=Math.ceil(spans[i][0]/60)*60, to=spans[i][1];
+      for(var m=from;m+60<=to;m+=60){out.push(m);}
+    }
+    return out;
+  }
+  function paint(active){
+    var bs=slotsEl.querySelectorAll('.slot');
+    for(var i=0;i<bs.length;i++){
+      bs[i].className='slot'+(Number(bs[i].getAttribute('data-m'))===active?' on':'');
+    }
+  }
+  function render(){
+    var date=dateEl.value?new Date(dateEl.value+'T00:00:00'):new Date();
+    var slots=slotsFor(date);
+    slotsEl.innerHTML='';
+    if(!slots.length){
+      slotsEl.textContent='в этот день закрыто';
+      if(nextEl){nextEl.textContent='—';}
+      return;
+    }
+    for(var i=0;i<slots.length;i++){
+      var b=document.createElement('button');
+      b.type='button';
+      b.className='slot';
+      b.textContent=label(slots[i]);
+      b.setAttribute('data-m',slots[i]);
+      b.addEventListener('click',function(){
+        timeEl.value=this.textContent;
+        paint(Number(this.getAttribute('data-m')));
+      });
+      slotsEl.appendChild(b);
+    }
+    var now=new Date(), sameDay=date.toDateString()===now.toDateString();
+    var limit=sameDay?now.getHours()*60+now.getMinutes()+60:0;
+    var best=null;
+    for(var j=0;j<slots.length;j++){ if(!sameDay||slots[j]>=limit){best=slots[j];break;} }
+    if(best!==null){
+      if(nextEl){nextEl.textContent=label(best);}
+      if(!timeEl.value){timeEl.value=label(best);paint(best);}
+    }else if(nextEl){nextEl.textContent='—';}
+  }
+
+  var t=new Date();
+  dateEl.min=t.toISOString().slice(0,10);
+  dateEl.value=t.toISOString().slice(0,10);
+  dateEl.addEventListener('change',function(){timeEl.value='';render();});
+  render();
+
+  var shot=(location.search.match(/[?&]shot=([a-z]+)/)||[])[1];
+  if(shot){document.documentElement.className='omp-shot omp-shot-'+shot;}
+
+  var els=document.querySelectorAll('.reveal');
+  var still=(location.search.indexOf('static')>=0)||(location.hash==='#static');
+  if(still){
+    for(var s0=0;s0<els.length;s0++){els[s0].className+=' in';}
+    var mf=document.querySelector('.mapwrap iframe');
+    if(mf){mf.parentNode.removeChild(mf);}
+  }else if(window.IntersectionObserver){
+    var io=new IntersectionObserver(function(list){
+      list.forEach(function(en){ if(en.isIntersecting){en.target.className+=' in';} });
+    },{threshold:.1});
+    for(var k=0;k<els.length;k++){io.observe(els[k]);}
+    setTimeout(function(){
+      for(var n=0;n<els.length;n++){els[n].className+=' in';}
+    },700);
+  }else{
+    for(var q=0;q<els.length;q++){els[q].className+=' in';}
+  }
+})();
+</script>
+</body></html>
