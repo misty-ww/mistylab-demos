@@ -99,7 +99,9 @@
         border-bottom:1px solid var(--line)}
  .bar{display:flex;align-items:center;gap:var(--s3);height:auto;
       padding-top:var(--s4);padding-bottom:var(--s4)}
- .logo{display:flex;align-items:center;gap:var(--s3);font-weight:700}
+ .logo{display:flex;align-items:center;gap:var(--s3);font-weight:700;min-width:0}
+ .logo>.mark{flex:0 0 auto}
+ .logo>span:last-child{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
  .mark{width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,var(--a),var(--b));
        color:#fff;display:grid;place-items:center;font-size:17px;font-weight:700}
  .mark.circle{border-radius:50%}
